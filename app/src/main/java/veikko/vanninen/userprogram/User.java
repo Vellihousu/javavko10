@@ -1,16 +1,21 @@
 package veikko.vanninen.userprogram;
 
-public class User {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class User implements Serializable {
     protected String firstName;
     protected String lastName;
     protected String email;
     protected String degreeProgram;
+    protected ArrayList<String> degrees = new ArrayList<>();
 
-    public User(String firstName, String lastName, String email, String degreeProgram) {
+    public User(String firstName, String lastName, String email, String degreeProgram, ArrayList<String> degrees) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.degreeProgram = degreeProgram;
+        this.degrees = degrees;
     }
 
     public String getFirstName() {
@@ -27,5 +32,9 @@ public class User {
 
     public String getDegreeProgram() {
         return degreeProgram;
+    }
+
+    public ArrayList<String> getDegrees() {
+        return degrees;
     }
 }

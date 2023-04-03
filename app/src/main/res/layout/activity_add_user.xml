@@ -9,12 +9,13 @@
 
     <EditText
         android:id="@+id/ptFirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Etunimi"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,12 +23,13 @@
 
     <EditText
         android:id="@+id/ptLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Sukunimi"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,12 +37,13 @@
 
     <EditText
         android:id="@+id/ptEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Sähköpostiosoite"
         android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,9 +51,8 @@
 
     <RadioGroup
         android:id="@+id/rgDegreeProgram"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_width="231dp"
+        android:layout_height="191dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,42 +61,81 @@
         <RadioButton
             android:id="@+id/rbComputationalEngineer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Laskennnallinen tekniikka" />
 
         <RadioButton
             android:id="@+id/rbElectricalEngineer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_height="48dp"
             android:text="Sähkötekniikka" />
 
         <RadioButton
             android:id="@+id/rbSoftwareEngineer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="0dp"
             android:text="Tietotekniikka" />
 
         <RadioButton
             android:id="@+id/rbIndustrialEngineer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="0dp"
             android:text="Tuotantotalous" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btnAddNewUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
         android:onClick="addUser"
         android:text="Lisää käyttäjä"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rgDegreeProgram"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintTop_toBottomOf="@+id/cbSwimMaster"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/cbBEngineer"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Kanditaatin tutkinto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgDegreeProgram" />
+
+    <CheckBox
+        android:id="@+id/cbMScEngineer"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Diplomi-insinöörin tutkinto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbBEngineer" />
+
+    <CheckBox
+        android:id="@+id/cbDScEngineer"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Tekniikan tohtorin tutkinto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbMScEngineer" />
+
+    <CheckBox
+        android:id="@+id/cbSwimMaster"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Uimamaisteri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbDScEngineer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

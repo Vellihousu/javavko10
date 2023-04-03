@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:background="#00BCD4"
     android:orientation="horizontal">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,27 +15,34 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtUserFirstName"
+            android:id="@+id/txtUserFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Käyttäjän etunimi" />
-
-        <TextView
-            android:id="@+id/txtUserLastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Käyttäjän sukunimi" />
-
-        <TextView
-            android:id="@+id/txtUserEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Käyttäjän sähköpostiosoite" />
+            android:layout_marginBottom="10dp"
+            android:text="Käyttäjän kokonimi"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtUserDegreeProgram"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Käyttäjän opintohaara" />
+            android:text="Käyttäjän opintohaara"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Käyttäjän sähköpostiosoite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtUserDegrees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Käyttäjän tutkinnot"
+            android:textSize="20sp"
+            android:textStyle="italic" />
     </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -27,10 +27,20 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        holder.userFirstName.setText(users.get(position).getFirstName());
-        holder.userLastName.setText(users.get(position).getLastName());
-        holder.userEmail.setText(users.get(position).getEmail());
+        holder.userFullName.setText(users.get(position).getFirstName() + " " + users.get(position).getLastName());
         holder.userDegreeProgram.setText(users.get(position).getDegreeProgram());
+        holder.userEmail.setText(users.get(position).getEmail());
+
+        if (users.get(position).getDegrees().isEmpty()) {
+            holder.userDegrees.setText(null);
+        }
+        else {
+            StringBuilder stringBuilder = new StringBuilder("Suoritetut tutkinnot:");
+            for (String degree : users.get(position).degrees) {
+                stringBuilder.append("\n-" + degree);
+            }
+            holder.userDegrees.setText(stringBuilder.toString());
+        }
 
     }
 
